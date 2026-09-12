@@ -1,42 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
-    <title>My Website</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dota 2 Wiki</title>
+    <link rel="icon" href="images/icon.png" type="image/png">
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
+    <script type="module" src="script.js"></script>
 </head>
 <body>
-    <header>
-        <a href="index.html" class="logo">
-            <image src="images/icon.png" alt="Logo" class="logo"></image>
-        </a>
-        <div class="logo">Dota 2 Wikitionary</div>
-    </header>
-    <div class="overlay"></div>
-    <div class="container">
-    <aside>
-        <h2>Sidebar</h2>
-        <nav class="navbar">
-        <div class="logo">Dota 2 Wikitionary</div>
-            <a href="index.html">Home</a>
-            <a href="heroes.html">Heroes</a>
-            <a href="items.html">Items</a>
-            <a href="map.html">Map</a>
-            <a href="esports.html">Esports</a>
-        </nav>
-    </aside>
+    <a class="skip-link" href="#app">Перейти к контенту</a>
+    <div class="page-shell">
+        <header class="site-header">
+            <a href="#home" class="brand" aria-label="Dota 2 Wiki: главная страница">
+                <img src="images/icon.png" alt="Логотип Dota 2 Wiki" class="brand__icon">
+                <span class="brand__title">Dota 2 Wiki</span>
+            </a>
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+                Меню
+            </button>
+            <nav id="site-nav" class="site-nav" aria-label="Разделы Dota 2 Wiki">
+                <a class="nav-link" href="#home" data-route="home">Главная</a>
+                <a class="nav-link" href="#heroes" data-route="heroes">Герои</a>
+                <a class="nav-link" href="#items" data-route="items">Предметы</a>
+                <a class="nav-link" href="#guides" data-route="guides">Роли и гайды</a>
+                <a class="nav-link" href="#about" data-route="about">О игре</a>
+            </nav>
+        </header>
 
-        <main>
-            <h2>Welcome to the Dota 2 Wiki</h2>
-            <p>Here you can find anything about Dota 2. Explore the world of Dota 2!</p>
-        </main>
+        <main id="app" class="content" tabindex="-1" aria-live="polite"></main>
+
+        <footer class="site-footer">
+            <p>© 2026 Dota 2 Wiki. Фанатский проект на чистом HTML/CSS/JS.</p>
+        </footer>
     </div>
-
-
-    <footer>
-        <p>&copy; 2026 My Website. All rights reserved.</p>
-    </footer>
 </body>
 </html>
